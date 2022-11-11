@@ -1,0 +1,15 @@
+org.example.SecondTest.testE:0/10
+org.example.SecondTest.testD:1/10
+org.example.SecondTest.testC:2/10
+org.example.SecondTest.testB:3/10
+org.example.SecondTest.testA:4/10
+org.example.FirstTest.testZero:1/10
+org.example.FirstTest.testOne:2/10
+org.example.FirstTest.testTwo:3/10
+org.example.FirstTest.testThree:4/10
+org.example.FirstTest.testFour:5/10
+org.example.FirstTest.testFive:6/10
+org.example.FirstTest.testSix:7/10
+org.example.FirstTest.testSeven:8/10
+org.example.FirstTest.testEight:9/10
+org.example.FirstTest.testNine:10/10
