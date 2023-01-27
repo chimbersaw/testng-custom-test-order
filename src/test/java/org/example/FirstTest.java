@@ -21,6 +21,7 @@ public class FirstTest {
     @Test
     public void testThree() {
         System.out.println(3);
+        assert false;
     }
 
     @Test

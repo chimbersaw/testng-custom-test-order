@@ -1,9 +1,6 @@
 package org.jetbrains.teamcity.testPrioritization;
 
-import org.testng.IMethodInstance;
-import org.testng.IMethodInterceptor;
-import org.testng.ITestContext;
-import org.testng.ITestNGMethod;
+import org.testng.*;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CustomOrder implements IMethodInterceptor {
+public class CustomOrder implements IMethodInterceptor, ITestListener {
     private static final String TEST_PRIORITIZATION_CONFIG = "/test-prioritization-config.txt";
 
     private double toRatioValue(String s) {
@@ -57,11 +54,18 @@ public class CustomOrder implements IMethodInterceptor {
         return successProbability.getOrDefault(qualifiedName(instance.getMethod()), 0.0);
     }
 
+    @Override
     public List<IMethodInstance> intercept(List<IMethodInstance> methods, ITestContext context) {
         if (!successProbability.isEmpty()) {
             methods.sort(Comparator.comparingDouble(this::getMethodSuccessProbability));
         }
 
         return methods;
+    }
+
+    @Override
+    public void onTestFailure(ITestResult result) {
+        System.out.println("xyz");
+        System.exit(1);
     }
 }
