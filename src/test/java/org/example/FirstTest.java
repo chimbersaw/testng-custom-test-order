@@ -4,52 +4,62 @@ import org.testng.annotations.Test;
 
 public class FirstTest {
     @Test
-    public void testZero() {
+    public void testZero() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(0);
     }
 
     @Test
-    public void testOne() {
+    public void testOne() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(1);
     }
 
     @Test
-    public void testTwo() {
+    public void testTwo() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(2);
     }
 
     @Test
-    public void testThree() {
+    public void testThree() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(3);
     }
 
     @Test
-    public void testFour() {
+    public void testFour() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(4);
     }
 
     @Test
-    public void testFive() {
+    public void testFive() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(5);
     }
 
     @Test
-    public void testSix() {
+    public void testSix() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(6);
     }
 
     @Test
-    public void testSeven() {
+    public void testSeven() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(7);
     }
 
     @Test
-    public void testEight() {
+    public void testEight() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(8);
     }
 
     @Test
-    public void testNine() {
+    public void testNine() throws InterruptedException {
+        Thread.sleep(1500L);
         System.out.println(9);
     }
 }
